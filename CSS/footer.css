@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+   
+   #footer_content {
+   
+   -webkit-border-radius : 5px;
+      -moz-border-radius : 5px;
+	     -o-border-radius : 5px;
+		    border-radius : 5px;
+background-color:#1d1711;
+   padding-top:90px;
+	position:relative;
+	padding-bottom: 90px !important;
+}
+
+#footer_content a {
+	color: #cbb190;
+	
+}
+
+#follow
+{
+color:#cbb190;
+
+font-family:Broadway;
+}
+
+a#sg1#sg2#sg3#sg4
+{
+margin-left:0px;
+margin-top:10px;
+
+}
+
+.subs-area{background:url(../images/bg-subs.png) left top no-repeat;width:600px;height:65px;padding:34px 0 0 0;margin-top:-40px;margin-left:auto;margin-right:auto;position:relative}
+
+.subs-area-left{width:300px;float:left;padding:0 0 0 56px;}
+.subs-area dfn{font-family:Broadway;font-style:normal;font-size:25px;font-weight:700;color:#285684;padding:0px 0 0 0;display:block;}
+.subs-area small{font-style:normal;font-size:12px;color:#525252;padding:0px 0 0 0;display:block;}
+.thanks-subs {visibility:hidden;margin-top:-17px;}
+/*.sbmt-go{float:right;width:97px;margin:0 0 0 0px;background:url(../images/subs-btn.png) left top no-repeat;height:36px;border:0px;cursor:pointer;text-indent:-9999999px;}
+*/
