@@ -1,0 +1,338 @@
+
+<html>
+<head>
+
+<title></title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+<script>
+var init = function() {
+  var card = document.getElementById('flip');
+  
+  document.getElementById('clickBut').addEventListener( 'click', function(){ card.toggleClassName('flipped'); }, false);
+};
+
+window.addEventListener('DOMContentLoaded', init, false);
+
+
+
+Element.prototype.hasClassName = function (a) {
+    return new RegExp("(?:^|\\s+)" + a + "(?:\\s+|$)").test(this.className);
+};
+
+Element.prototype.addClassName = function (a) {
+    if (!this.hasClassName(a)) {
+        this.className = [this.className, a].join(" ");
+    }
+};
+
+Element.prototype.removeClassName = function (b) {
+    if (this.hasClassName(b)) {
+        var a = this.className;
+        this.className = a.replace(new RegExp("(?:^|\\s+)" + b + "(?:\\s+|$)", "g"), " ");
+    }
+};
+
+Element.prototype.toggleClassName = function (a) {
+  this[this.hasClassName(a) ? "removeClassName" : "addClassName"](a);
+};
+</script>
+
+
+
+<style type="text/css">
+
+html, body, h1, form, fieldset, input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  }
+
+body { font-family: Helvetica, Arial, sans-serif; font-size: 12px; }
+
+        .registration {
+		-webkit-user-select: none;
+			color: #fff;
+            background: #2d2d2d;
+            background: -webkit-gradient(
+                            linear,
+                            left bottom,
+                            left top,
+                            color-stop(0, rgb(60,60,60)),
+                            color-stop(0.74, rgb(43,43,43)),
+                            color-stop(1, rgb(60,60,60))
+                        );
+						-webkit-border-radius: 10px;
+            /*background: -moz-linear-gradient(
+                            center bottom,
+                            rgb(60,60,60) 0%,
+                            rgb(43,43,43) 74%,
+                            rgb(60,60,60) 100%
+                        );
+            -moz-border-radius: 10px; border-radius: 10px;*/
+			
+            margin: 20px;
+			width: 450px;
+			height:370px;
+            }
+
+ .registration a {
+      color: #8c910b;
+      text-shadow: 0px -1px 0px #000;
+      }
+	  
+.registration fieldset {
+      padding: 20px;
+      }
+	  
+	   .login {
+		-webkit-user-select: none;
+			color: #fff;
+            background: #2d2d2d;
+            			-webkit-border-radius: 10px;
+            -moz-border-radius: 10px; border-radius: 10px;
+			
+            margin: 20px;
+			width: 450px;
+			height:370px;
+            }
+	  
+	  
+	.login a {
+      color: #8c910b;
+      text-shadow: 0px -1px 0px #000;
+      }
+	  
+.login fieldset {
+      padding: 20px;
+      }
+	  
+input.text {
+      -webkit-border-radius: 15px;
+      -webkit-box-shadow: 0px 5px 15px #777;
+	  /*background:  url('img/inputSprite.png') no-repeat 4px 5px, -webkit-gradient(
+          linear,
+          left bottom,
+          left top,
+          color-stop(0, rgb(225,225,225)),
+          color-stop(0.54, rgb(215,215,215)),
+          color-stop(1, rgb(173,173,173))
+          );*/
+		  
+		  
+	  -moz-border-radius: 15px;
+      /*background: url('img/inputSprite.png') no-repeat 4px 5px, -moz-linear-gradient(
+           center bottom,
+           rgb(225,225,225) 0%,
+           rgb(215,215,215) 54%,
+           rgb(173,173,173) 100%
+           );*/
+		-moz-box-shadow: 0px 5px 15px #777;
+		
+	  border-radius: 15px;
+      background: #ddd url('img/inputSprite.png') no-repeat 4px 5px;
+	  border:solid 1px #444;
+      
+	  font-size: 14px;
+      width: 90%;
+      padding: 7px 8px 7px 30px;
+      color:#333;
+      
+}	  
+
+ input#email { 
+ 	background-position: 4px 5px, 0px 0px;
+	}
+	
+ input#password { 
+ 	background-position: 4px -20px, 0px 0px;
+	}
+	
+ input#name { 
+ 	background-position: 4px -46px, 0px 0px; 
+	}
+	
+ input#tel { 
+ 	background-position: 4px -76px, 0px 0px; 
+	}
+	
+.registration h2 {
+	color: #fff;
+	text-shadow: 0px 10px 25px #888;
+	border-bottom: solid #181818 1px;
+	-moz-box-shadow: 0px 1px 0px #3a3a3a;
+	text-align: center;
+	padding: 18px;
+	margin: 0px;
+	font-weight: normal;
+	font-size: 24px;
+	font-family: Lucida Grande, Helvetica;
+	}
+	
+	.registration p {
+      position: relative;
+      }
+	
+#registerNew {
+	width: 203px;
+	height: 40px;
+	border: none;
+	text-indent: -9999px;
+	background: url('img/createAccountButton.png') no-repeat;
+	cursor: pointer;
+	float: right;
+	}
+	
+	#registerNew:hover { background-position: 0px -41px; }
+	#registerNew:active { background-position: 0px -82px; }
+	
+	#clickBut{
+	
+			height: 37px;
+			width: 37px;
+			position: absolute;
+			top:3px;
+			
+	}
+	
+ 
+ .login h2 {
+	color: #fff;
+	text-shadow: 0px 10px 25px #888;
+	border-bottom: solid #181818 1px;
+	-moz-box-shadow: 0px 1px 0px #3a3a3a;
+	text-align: center;
+	padding: 18px;
+	margin: 0px;
+	font-weight: normal;
+	font-size: 24px;
+	font-family: Lucida Grande, Helvetica;
+	}
+	
+	.login p {
+      position: relative;
+      }
+	
+#loginOld {
+	width: 203px;
+	height: 40px;
+	border: none;
+	text-indent: -9999px;
+	background: url('img/createAccountButton.png') no-repeat;
+	cursor: pointer;
+	float: right;
+	}
+	
+	#loginOld:hover { background-position: 0px -41px; }
+	#loginOld:active { background-position: 0px -82px; }
+	
+	
+	
+	
+	#flip{
+	  position: relative;
+      /*-webkit-perspective: 800px;
+         -moz-perspective: 800px;
+           -o-perspective: 800px;
+              perspective: 800px;*/
+      margin-left:200px;
+	  width: 490px;
+      height: 200px;
+      
+      -webkit-transition: -webkit-transform 1s;
+         -moz-transition: -moz-transform 1s;
+           -o-transition: -o-transform 1s;
+              transition: transform 1s;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+    
+	}
+	
+	#flip.flipped {
+      -webkit-transform: rotateY( 180deg );
+         -moz-transform: rotateY( 180deg );
+           -o-transform: rotateY( 180deg );
+              transform: rotateY( 180deg );
+    }
+ 
+ #flip > div {
+      
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+ 
+  #flip .registration {
+     
+    }
+
+    #flip .login {
+    
+      -webkit-transform: rotateY( 180deg );
+         -moz-transform: rotateY( 180deg );
+           -o-transform: rotateY( 180deg );
+              transform: rotateY( 180deg );
+    }
+ 
+ 
+ 
+</style>
+
+</head>
+
+<body>
+<div id="flip">
+<div class="registration">
+ <h2>Create an Account</h2>
+
+ <form id="RegisterUserForm" action="" method="post">
+ 	<fieldset>
+        <p><input id="name" name="name" type="text" class="text" value="" placeholder="Name" /></p>
+        
+		<p><input id="tel" name="tel" type="tel" class="text" value="" placeholder="Phone Number"/></p>
+        
+        <p><input id="email" name="email" type="email" class="text" value="" placeholder="Email"/></p>
+        
+        <p><input id="password" name="password" class="text" type="password" placeholder="Password"/></p>
+        
+        <p><input id="acceptTerms" name="acceptTerms" type="checkbox" />
+            <label for="acceptTerms">
+                I agree to the <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</a>
+            </label>
+        </p>
+        
+        <p>
+			<a href="#" title="Already A User" id="clickBut" class="logleft flip" style="left: 0px; opacity: 1;"><img src="buttons1.png"></img></a>
+            <button id="registerNew" type="submit">Register</button>
+        </p>
+ 	</fieldset>
+
+ </form>
+</div>
+
+<div class="login">
+ <h2>Login</h2>
+
+ <form id="LoginForm" action="" method="post">
+ 	<fieldset>
+       
+        <p><input id="email" style="margin-top:20px;margin-left:10px;" name="email" type="email" class="text" value="" placeholder="Email"/></p>
+        
+        <p><input id="password" style="margin-top:20px;margin-left:10px;" name="password" class="text" type="password" placeholder="Password"/></p>
+              
+        <p style="margin-top:50px">
+			<a href="#" title="New User" id="clickBut" class="logright flip" style="left: 0px; opacity: 1;"><img src="buttons2.png"></img></a>
+            <button id="loginOld" type="submit">Login</button>
+        </p>
+ 	</fieldset>
+
+ </form>
+</div>
+
+</div>
+</body>
+</html>
