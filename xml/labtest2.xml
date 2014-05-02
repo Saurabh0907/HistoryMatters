@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="/xml/labtest2.xsl" ?>
+<data>
+	<employee>
+		<employee_name>
+			Niket Agarwal
+		</employee_name>
+		<street>
+			A-10, Sector 62
+		</street>
+		<city>
+			Noida
+		</city>
+	</employee>
+	<employee>
+		<employee_name>
+			Prateek Jain
+		</employee_name>
+		<street>
+			A-10, Sector 62 Check 1
+		</street>
+		<city>
+			Noida check 1
+		</city>
+	</employee>
+	<employee>
+		<employee_name>
+			Vikas Srivastava
+		</employee_name>
+		<street>
+			A-10, Sector 62 Check 2
+		</street>
+		<city>
+			Noida Check 2
+		</city>
+	</employee>
+	<work>
+		<employee_name>
+			Niket Agarwal
+		</employee_name>
+		<company_name>
+			JIIT
+		</company_name>
+		<salary>
+			60,000
+		</salary>
+	</work>
+	<work>
+		<employee_name>
+			Prateek Jain
+		</employee_name>
+		<company_name>
+			JIIT
+		</company_name>
+		<salary>
+			40,000
+		</salary>
+	</work>
+	<work>
+		<employee_name>
+			Vikas Srivastava
+		</employee_name>
+		<company_name>
+			JIIT
+		</company_name>
+		<salary>
+			55,000
+		</salary>
+	</work>
+	<company>
+		<company_name>
+			JIIT
+		</company_name>
+		<city>
+			Noida
+		</city>
+	</company>
+	<manages>
+		<employee_name>
+			Niket Agarwal
+		</employee_name>
+		<manager>
+			ABC
+		</manager>
+	</manages>
+	<manages>
+		<employee_name>
+			Prateek Jain
+		</employee_name>
+		<manager>
+			PQR
+		</manager>
+	</manages>
+	<manages>
+		<employee_name>
+			Vikas Srivastava
+		</employee_name>
+		<manager>
+			XYZ
+		</manager>
+	</manages>
+</data>
